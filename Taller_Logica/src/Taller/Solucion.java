@@ -15,12 +15,17 @@ public class Solucion {
     static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) {
         
-        Opereciones();
-        System.out.println("-------------------");
-        Rectangulo();
-        System.out.println("--------------------");
-        Carbon();
-         System.out.println("--------------------");
+        //Opereciones();
+        //System.out.println("-------------------");
+        //Rectangulo();
+        //System.out.println("--------------------");
+        //Carbon();
+        //System.out.println("--------------------");
+        //Autos();
+        //System.out.println("--------------------");
+        //Banco ();
+        //System.out.println("--------------------");
+        NumerosDe2En2 ();
     }
     public static void Opereciones() {
         int primero = 3+((8*5)-(6/3));
@@ -68,6 +73,68 @@ public class Solucion {
         System.out.println("el promedio de los 12 años en toneladas es: "+ promedio + " toneladas");
         System.out.println("el promedio de los 12 años en kilos es: "+ promedio2 + " kilos");
     }
+    
+    public static void Autos() {
+        double comision ;
+        System.out.println("ingrese nombre del auto ");
+        String nombAuto = leer.next();
+        System.out.println("ingrese el precio del auto");
+        int precio = leer.nextInt();
+        
+        if(precio <= 100000){
+            comision = (precio * 0.015);
+            System.out.println("la comision por la venta el auto " + nombAuto + "es: " + comision );
+        }else if(precio > 100000 && precio <= 250000){
+            comision = (precio * 0.018);
+            System.out.println("la comision por la venta del auto " + nombAuto + " es: " + comision );
+        }else if(precio > 250000){
+            comision = (precio * 0.023);
+            System.out.println("la comision por la venta el auto " + nombAuto + "es: " + comision );
+        }
+    }
+    
+    public static void Banco () {
+        System.out.println("BIENVENIDO" + "\n" +
+                "-------------" + "\n" +
+                "ingrese 1 si desea consultar saldo" + "\n" +
+                "ingrese 2 si desea realizar transferencias " + "\n" +
+                "ingrese 3 si desea cambiar la clave" + "\n" +
+                "ingrese 4 si desea bloquear producto" + "\n" +
+                "ingrese 5 si desea realizar una donacion" + "\n"  );
+        int opcion = leer.nextInt();
+        
+        switch (opcion) {
+            case 1:
+                System.out.println("su saldo es: $$$$$$");
+                break;
+            case 2:
+                System.out.println("transferencia realizada con exito");
+                break;
+            case 3:
+                System.out.println("clave cambiada con exito");
+                break;
+            case 4:
+                System.out.println("producto bloqueado con exito");
+                break;
+            case 5:
+                System.out.println("donacion realizada con exito");
+                break;
+            default:
+                System.out.println("error,intentelo de nuevo");
+        }
+        
+    }
+    
+    public static void NumerosDe2En2 () {
+        int contador = 0;
+        
+        for(int i=0; i < 100; i++){
+            contador = contador +2;
+            System.out.println(contador);         
+        }
+    }
+    
+    
     
     
 }
